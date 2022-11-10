@@ -1,0 +1,84 @@
+body{
+    background: #007cce;
+    background: -webkit-linear-gradient(to right, #438fdb, #ec4e4e); 
+    background: linear-gradient(to right, #77aee6, #e04444);  
+}
+
+.title{
+    text-align: center;
+    font-size: 50px;
+    text-shadow: 3px 2px red;
+}
+
+.alert {
+    padding: 10px;
+    background-color: #be281e;
+    width: 500px;
+    margin-left: 70px;
+    color: white;
+    text-align: center;
+  }
+.success {
+    padding: 10px;
+    margin-left: 120px;
+    width: 500px;
+    background-color: #0ba138;
+    width: 400px;
+    color: white;
+    text-align: center;
+  }
+
+.form{
+    background: linear-gradient(to right, #e93434, #5faaf6);
+    border-radius: 30px;
+    width: 650px;
+    margin: 50px auto;
+    padding: 60px;
+}   
+
+.form-body{
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+    padding: 40px 30px;
+    
+}
+
+.form-body *{
+    padding: 10px;
+    
+}
+
+.form__label{
+    width: 40%;
+}
+
+.form_input{
+    width: 60%;
+}
+
+.form__label{
+    font-size: 3vh;
+    font-weight: 500;
+    font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+.form__input{
+    padding: 5px;
+    border-bottom: 4px;
+    margin-left: 10px;
+}
+
+.footer{
+    text-align: center;
+   
+}   
+.btn{
+    padding: 8px;
+    background-color:#ff3d00;
+    font-size: large;
+    width: 15vh;
+    border-radius: 10px;
+}
+.btn:hover{
+    background-color:  #e63600;
+}
