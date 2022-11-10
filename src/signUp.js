@@ -79,7 +79,7 @@ function SignUp() {
         </div>
     </div>
     <div className="footer">
-        <button type="submit" className="btn" onClick={submit}> SignUp</button>
+        <button type="submit" className="btn" onClick={submit}>Login</button>
     </div>
 </div>      
   )

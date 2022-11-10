@@ -1,5 +1,6 @@
 import{ useEffect, useState } from 'react'
 import axios from 'axios';
+import "./subjects.css"
 
 function Subjects() {
    let id = localStorage.getItem("_id")
@@ -8,14 +9,17 @@ function Subjects() {
 
    const getMyPostData = async () => {
      try {
-      console.log(id)
-       const res = await axios.get(`https://localhost:3001/filterSubjects?userId=${id}`);
-       setMyData(res.data);
+      let url = `http://localhost:3001/filterSubjects?userId=${id}`
+       const res = await axios.get(url);
+       setMyData(res.data.data);
      } catch (error) {
        setIsError(error.message);
      }
-     console.log(myData)
    };
+
+   const deleteSub = ()=>{
+        
+   }
 
    useEffect(() => {
      getMyPostData();
@@ -23,14 +27,20 @@ function Subjects() {
 
   return (
     <>
-         <h1>SUBJECTS</h1>
+         <h1 className='heading'>SUBJECTS</h1>
          <div className='grid'>
-          {myData.map((sub)=>{
-            const{id,name,marks} = sub;
+           {myData.length==0 && 
+              <div className='heading'> No Data</div>
+           }
+          { myData.map((sub)=>{
+            console.log(sub)
+            const{id,subjectname,marks} = sub;
             return (
               <div className='card' key={id}>
-                   <h2>{name}</h2>
+                   <h2>{subjectname}</h2>
+                   <p> = </p>
                    <p>{marks}</p>
+                   {/* <button key={subjectname} onClick={deleteSub}>Delete</button> */}
               </div>
             )
           })}
